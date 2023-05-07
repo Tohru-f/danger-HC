@@ -4,4 +4,4 @@ fail 'pull requestのdescriptionにherokuapp.comのURLを記載してくださ�
 
 fail 'reviewerを指定して下さい' if github.pr_json[:requested_reviewers].empty?
 
-fail "assigneesにが未指定です" unless github.pr_json["assignee"]
+fail "assigneesが未指定です" unless github.pr_json["assignee"]
