@@ -6,4 +6,10 @@ fail 'reviewerを指定して下さい' if github.pr_json[:requested_reviewers].
 
 fail "assigneesが未指定です" unless github.pr_json["assignee"]
 
-fail ""
+if git.added_files.include?(".env")
+  fail <<~TEXT
+    .envファイルをコミットしないでください。
+    .gitignoreに.envを追加してください。
+    .env.exampleで設定する環境変数例を記載するとよいでしょう。
+  TEXT
+end
