@@ -13,3 +13,4 @@ if git.added_files.include?(".env")
     .env.exampleで設定する環境変数例を記載するとよいでしょう。
   TEXT
 end
+#2023.8.11追記
