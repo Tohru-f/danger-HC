@@ -14,3 +14,4 @@ if git.added_files.include?(".env")
   TEXT
 end
 #2023.8.11追記
+#2023.8.11 2回目の追記
